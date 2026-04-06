@@ -1,0 +1,105 @@
+﻿@model DL_CompetencyPMS.Model.CaseStudySolutionInfo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>CaseStudySolutionInfo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CSID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CSID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CaseStudy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CaseStudy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AssessmentID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AssessmentID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.soln1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.soln1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Comp1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comp1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.soln2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.soln2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Comp2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comp2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.soln3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.soln3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Comp3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comp3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.soln4)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.soln4)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Comp4)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comp4)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsReviewed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsReviewed)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+﻿@model IEnumerable<DL_CompetencyPMS.Model.CaseStudySolutionInfo>
+
+@{
+    Layout = null;
+    ViewBag.Title = "CompetencyPMS CaseStudy";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background: linear-gradient(to right, #d7e1ec, #f0f4f8);
+            padding: 40px;
+        }
+
+        .list-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .page-title {
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .action-links a {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="list-card">
+            <h3 class="page-title">Case Study</h3>
+
+
+
+            <table class="table table-bordered table-striped table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.First().CSID)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().CaseStudy)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().AssessmentID)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().soln1)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Comp1)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().soln2)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Comp2)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().soln3)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Comp3)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().soln4)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Comp4)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().CreatedBy)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().IsReviewed)</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.CSID</td>
+                                <td>@item.CaseStudy</td>
+                                <td>@item.AssessmentID</td>
+                                <td>@item.soln1</td>
+                                <td>@item.Comp1</td>
+                                <td>@item.soln2</td>
+                                <td>@item.Comp2</td>
+                                <td>@item.soln3</td>
+                                <td>@item.Comp3</td>
+                                <td>@item.soln4</td>
+                                <td>@item.Comp4</td>
+                                <td>@item.CreatedBy</td>
+                                <td>@item.IsReviewed</td>
+
+                                <td class="text-center action-links">
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.CSID }, new { @class = "btn btn-sm btn-info text-white" })
+                                    @Html.ActionLink("Details", "Details", new { id = item.CSID }, new { @class = "btn btn-sm btn-info text-white" })
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.CSID }, new { @class = "btn btn-sm btn-info text-white" })
+                                </td>
+
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center text-muted">No roles found.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
