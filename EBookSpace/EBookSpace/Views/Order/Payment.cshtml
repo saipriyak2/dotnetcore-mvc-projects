@@ -1,0 +1,32 @@
+﻿@using EBookSpace.Models.DTOs.UI
+@model PaymentDTO
+<button id="rzp-button1">Pay</button>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    var options = {
+        "key": "rzp_test_us_STdrDMVckIg5bT", // Enter the Key ID generated from the Dashboard
+        "amount": "50000", // Amount is in currency subunits.
+        "currency": "INR",
+        "name": "@Html.DisplayFor(model => model.Name)", //your business name
+        "description": "Test Transaction",
+        "image": "https://example.com/your_logo",
+        "order_id": "@ViewBag.orderid", // This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+        "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
+        "prefill": { //We recommend using the prefill parameter to auto-fill customer's contact information especially their phone number
+            "name": "@Html.DisplayFor(model => model.Name)", //your customer's name
+            "email": "@Html.DisplayFor(model => model.Email)",
+            "contact": "@Html.DisplayFor(model => model.MobileNumber)" //Provide the customer's phone number for better conversion rates
+        },
+        "notes": {
+            "address": "Razorpay Corporate Office"
+        },
+        "theme": {
+            "color": "#3399cc"
+        }
+    };
+    var rzp1 = new Razorpay(options);
+    document.getElementById('rzp-button1').onclick = function(e){
+        rzp1.open();
+        e.preventDefault();
+    }
+</script>

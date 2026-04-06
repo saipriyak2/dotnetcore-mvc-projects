@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBookSpace", "EBookSpace.csproj", "{C5AEA62E-C2A6-0930-2664-DF352DFF508F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookSpace_Test", "..\BookSpaceUtility_Test\BookSpace_Test.csproj", "{194AE797-E4D4-4C7E-BE64-A0C61D2A4182}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5AEA62E-C2A6-0930-2664-DF352DFF508F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5AEA62E-C2A6-0930-2664-DF352DFF508F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5AEA62E-C2A6-0930-2664-DF352DFF508F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5AEA62E-C2A6-0930-2664-DF352DFF508F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{194AE797-E4D4-4C7E-BE64-A0C61D2A4182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{194AE797-E4D4-4C7E-BE64-A0C61D2A4182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{194AE797-E4D4-4C7E-BE64-A0C61D2A4182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{194AE797-E4D4-4C7E-BE64-A0C61D2A4182}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C791613A-3C68-4E64-ACEF-1EAE62EA6559}
+	EndGlobalSection
+EndGlobal
